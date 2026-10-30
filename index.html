@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Muhammed Shifa | DotNet Developer</title>
+<meta name="description" content="Muhammed Shifa is a .NET developer in Sharjah, UAE with 4+ years of experience building enterprise web applications, APIs and compliance tools.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Instrument+Sans:wght@400;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF2F8; --surface:#FFFFFF; --ink:#0E1A2E; --muted:#51607A; --line:#D3DBE8; --accent:#2446D8; --accent-ink:#FFFFFF;
+  --code-bg:#0E1A2E; --code-ink:#DCE6F7; --c-kw:#7FA2FF; --c-str:#F2C36B; --c-id:#8FE0C0; --c-mut:#6F83A6;
+  --display:"Bricolage Grotesque","Segoe UI",Arial,sans-serif; --text:"Instrument Sans","Segoe UI",Arial,sans-serif; --mono:"JetBrains Mono",Consolas,monospace;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0A1220; --surface:#111C30; --ink:#E9EFFA; --muted:#97A5BF; --line:#233250; --accent:#86A2FF; --accent-ink:#0A1220;
+  --code-bg:#060C18; --code-ink:#DCE6F7;
+}}
+:root[data-theme="dark"]{
+  --bg:#0A1220; --surface:#111C30; --ink:#E9EFFA; --muted:#97A5BF; --line:#233250; --accent:#86A2FF; --accent-ink:#0A1220;
+  --code-bg:#060C18; --code-ink:#DCE6F7;
+}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--text);-webkit-text-size-adjust:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:980px;margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0;letter-spacing:-.02em}
+nav{display:flex;gap:20px;flex-wrap:wrap;padding:22px 0;font-size:.95rem;color:var(--muted)}
+nav a{text-decoration:none}nav a:hover{color:var(--ink);text-decoration:underline}
+nav .me{margin-right:auto;color:var(--ink);font:800 1.1rem var(--display)}
+
+/* hero */
+.hero{display:grid;gap:36px;padding:44px 0 64px}
+@media(min-width:860px){.hero{grid-template-columns:1.05fr .95fr;align-items:center;gap:48px}}
+.hero h1{font-size:clamp(2.6rem,8vw,4.6rem);font-weight:800}
+.hero p.lead{font-size:1.2rem;color:var(--muted);max-width:34ch;margin:22px 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:2px solid var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{transform:translateY(-1px)}
+pre.code{margin:0;background:var(--code-bg);color:var(--code-ink);border-radius:14px;padding:22px 20px;font:400 .84rem/1.75 var(--mono);overflow-x:auto;box-shadow:8px 8px 0 var(--accent)}
+pre.code .k{color:var(--c-kw)}pre.code .s{color:var(--c-str)}pre.code .i{color:var(--c-id)}pre.code .m{color:var(--c-mut)}
+pre.code span.ln{display:block;opacity:0;animation:ln .35s forwards;animation-delay:calc(var(--n)*.16s + .2s)}
+@keyframes ln{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:none}}
+
+/* sections */
+section{padding:56px 0;border-top:1px solid var(--line);display:grid;gap:26px}
+@media(min-width:860px){section{grid-template-columns:200px 1fr;gap:40px}}
+section>h2{font-size:1.5rem;font-weight:800;position:sticky;top:12px;align-self:start}
+.about p{margin:0 0 14px;max-width:62ch}
+.skills{display:grid;gap:18px}
+.skills div{display:grid;gap:6px}
+.skills h3{font:600 1rem var(--text);letter-spacing:0;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{background:var(--surface);border:1px solid var(--line);padding:5px 12px;border-radius:999px;font-size:.93rem}
+
+/* timeline */
+.tl{position:relative;display:grid;gap:36px;padding-left:26px;border-left:2px solid var(--line)}
+.job{position:relative}
+.job::before{content:"";position:absolute;left:-34px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.job h3{font-size:1.3rem;font-weight:600}
+.job .org{color:var(--accent);font-weight:600;margin:2px 0}
+.job .when{color:var(--muted);font-size:.93rem;margin-bottom:10px}
+.job ul{margin:0;padding-left:1.1rem;display:grid;gap:6px;max-width:66ch}
+
+/* projects */
+.proj{display:grid;gap:0}
+.p{padding:22px 0;border-bottom:1px solid var(--line)}
+.p:first-child{padding-top:0}
+.p h3{font-size:1.25rem;font-weight:600;margin-bottom:6px}
+.p p{margin:0 0 10px;max-width:64ch;color:var(--muted)}
+.tag{display:inline-block;font-size:.8rem;border:1px solid var(--line);border-radius:6px;padding:2px 9px;margin:0 6px 6px 0;color:var(--muted);background:var(--surface)}
+.p.feat h3{font-size:1.5rem;font-weight:800}
+.p.feat p{color:var(--ink)}
+.small{font-size:1rem}.small h3{font-size:1.05rem}
+.edu b{font-family:var(--display);font-size:1.2rem}
+.contact h2{font-size:2rem}
+.contact a.big{display:inline-block;font:800 clamp(1.4rem,5vw,2.2rem) var(--display);word-break:break-all;margin-bottom:10px}
+footer{padding:30px 0 50px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+@media(prefers-reduced-motion:reduce){pre.code span.ln{animation:none;opacity:1}html{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Main">
+  <a class="me" href="#top">Muhammed Shifa</a>
+  <a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+</nav>
+
+<header class="hero" id="top">
+  <div>
+    <h1>Muhammed Shifa</h1>
+    <p class="lead">.NET developer with 4+ years of experience building enterprise web apps, APIs and compliance tools. Secure, async and AI-ready.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:shifakmuhammed@gmail.com">Email me</a>
+      <a class="btn" href="tel:+971508269578">Call +971 50 826 9578</a>
+    </div>
+  </div>
+  <pre class="code" aria-label="Summary of skills written as C# code"><span class="ln" style="--n:0"><span class="k">class</span> <span class="i">MuhammedShifa</span> : <span class="i">DotNetDeveloper</span></span><span class="ln" style="--n:1">{</span><span class="ln" style="--n:2">  Experience = <span class="s">"4+ years"</span>;</span><span class="ln" style="--n:3">  Stack = [<span class="s">"C#"</span>, <span class="s">".NET Core"</span>,</span><span class="ln" style="--n:4">           <span class="s">"Web API"</span>, <span class="s">"SQL Server"</span>,</span><span class="ln" style="--n:5">           <span class="s">"Angular"</span>];</span><span class="ln" style="--n:6">  Domains = [<span class="s">"Banking"</span>, <span class="s">"AML/CFT"</span>,</span><span class="ln" style="--n:7">             <span class="s">"Audit"</span>, <span class="s">"E-Learning"</span>];</span><span class="ln" style="--n:8">  Location = <span class="s">"Sharjah, UAE"</span>;</span><span class="ln" style="--n:9">  AI = [<span class="s">"Claude API"</span>, <span class="s">"Vibe coding"</span>];</span><span class="ln" style="--n:10">}</span></pre>
+</header>
+
+<section class="about" id="about">
+  <h2>About</h2>
+  <div>
+    <p>I am a software developer who likes hard problems and tight deadlines. I build backend services and web front ends with C#, ASP.NET and Angular, and I keep the code clean enough for the next person to maintain.</p>
+    <p>I also build with AI every day. I integrate Claude into applications and use vibe coding and AI-assisted workflows to prototype and ship faster.</p>
+    <p>Right now I work at Alpha Data PJSC (4Sight Technologies) in Sharjah, building and supporting enterprise products. Before that I spent two years at Ociuz Infotech in Kerala building web applications and REST APIs.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div><h3>Backend</h3><ul class="chips"><li>C#</li><li>.NET Core</li><li>ASP.NET</li><li>ASP.NET Web API</li><li>RESTful APIs</li><li>Entity Framework</li></ul></div>
+    <div><h3>AI and vibe coding</h3><ul class="chips"><li>Claude API integration</li><li>LLM API integration</li><li>Tool and function calling</li><li>RAG basics</li><li>Claude Code</li><li>Prompt engineering</li><li>Vibe coding</li><li>AI-assisted development</li><li>LLM-powered features</li><li>Rapid prototyping</li></ul></div>
+    <div><h3>API security</h3><ul class="chips"><li>JWT authentication</li><li>OAuth 2.0</li><li>Role-based access control</li><li>OWASP Top 10</li><li>HTTPS and TLS</li><li>Input validation</li><li>CORS</li><li>Rate limiting</li></ul></div>
+    <div><h3>Asynchronous programming</h3><ul class="chips"><li>async/await</li><li>Task Parallel Library</li><li>Background services</li><li>Non-blocking APIs</li></ul></div>
+    <div><h3>CI/CD</h3><ul class="chips"><li>GitHub Actions</li><li>Azure DevOps pipelines</li><li>Automated build and deploy</li><li>Git workflows</li><li>Docker</li></ul></div>
+    <div><h3>Database</h3><ul class="chips"><li>SQL Server</li><li>Database design</li><li>Complex queries</li><li>Performance tuning</li></ul></div>
+    <div><h3>Frontend</h3><ul class="chips"><li>Angular</li><li>TypeScript</li><li>React</li><li>Reactive and template-driven forms</li><li>HttpClient</li><li>Responsive design</li></ul></div>
+    <div><h3>Reporting</h3><ul class="chips"><li>Crystal Reports</li><li>Microsoft Report Builder</li><li>Arbutus Analyzer</li></ul></div>
+    <div><h3>Tools</h3><ul class="chips"><li>Visual Studio</li><li>VS Code</li><li>SSMS</li><li>Git</li><li>Virtual machines</li><li>Containers</li></ul></div>
+    <div><h3>Domains</h3><ul class="chips"><li>Banking</li><li>Compliance and audit</li><li>E-commerce</li><li>E-learning</li><li>Van sales</li><li>B2B applications</li></ul></div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="tl">
+    <div class="job">
+      <h3>Software Developer</h3>
+      <div class="org">Alpha Data PJSC (4Sight Technologies), Sharjah, UAE</div>
+      <div class="when">2024 to present</div>
+      <ul>
+        <li>Develop and maintain enterprise applications with C#, ASP.NET and Web API.</li>
+        <li>Design backend APIs and optimize SQL Server databases and queries.</li>
+        <li>Build Angular front ends and integrate them with .NET services.</li>
+        <li>Manage product releases and production updates across the full SDLC.</li>
+        <li>Fix bugs, ship new features and provide ongoing technical support.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <h3>Jr. Software Developer</h3>
+      <div class="org">Ociuz Infotech Pvt Ltd, Kerala, India</div>
+      <div class="when">2022 to 2024</div>
+      <ul>
+        <li>Built web applications with C# and .NET Core.</li>
+        <li>Implemented RESTful APIs with ASP.NET Core and Entity Framework.</li>
+        <li>Integrated React and Angular front ends with .NET back ends.</li>
+        <li>Designed relational databases in SQL Server and configured VMs and containers for deployment.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="proj">
+    <div class="p feat">
+      <h3>AMLCFT</h3>
+      <p>Screens customer names against sanctions lists. When a potential match or exception is flagged, the compliance officer reviews the report and takes action.</p>
+      <span class="tag">Anti-Money Laundering</span><span class="tag">Combating the Financing of Terrorism</span><span class="tag">Compliance</span>
+    </div>
+    <div class="p feat">
+      <h3>XTRACK</h3>
+      <p>An audit application where auditors upload their observations. It analyzes them and produces a report that business users act on.</p>
+      <span class="tag">Audit</span><span class="tag">Reporting</span>
+    </div>
+    <div class="p feat">
+      <h3>EDC, Emirates Driving School</h3>
+      <p>Three portals for the driving school: one for students, one for corporate clients and one for trainers.</p>
+      <span class="tag">Student portal</span><span class="tag">Corporate portal</span><span class="tag">Trainer portal</span>
+    </div>
+    <div class="p small">
+      <h3>KK Salesman Tracker</h3>
+      <p>A mobile website for KKFM India Private Limited to track salesman visits, with location tracking, QR code scanning and selfie uploads. I also supported the client after deployment.</p>
+    </div>
+    <div class="p small">
+      <h3>C-TRACKER</h3>
+      <p>A Windows time-tracking application that measures an employee's idle and work time from mouse clicks and key presses.</p>
+    </div>
+    <div class="p small">
+      <h3>Logic E Learn</h3>
+      <p>An online learning platform where users buy courses and attend online classes.</p>
+    </div>
+    <div class="p small">
+      <h3>Foscher</h3>
+      <p>An admin panel for tracking salesmen and controlling sales and collection.</p>
+    </div>
+  </div>
+</section>
+
+<section class="edu" id="education">
+  <h2>Education</h2>
+  <div>
+    <b>BSCE Physical Science</b><br>
+    JAIN University, Bangalore, India (2021)<br><br>
+    <b>Languages</b><br>
+    English, Malayalam, Tamil, Hindi
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Contact</h2>
+  <div>
+    <p>Have a project or a role in mind? Write to me.</p>
+    <a class="big" href="mailto:shifakmuhammed@gmail.com">shifakmuhammed@gmail.com</a><br>
+    <a href="tel:+971508269578">+971 50 826 9578</a> &nbsp;&bull;&nbsp; Sharjah, UAE
+  </div>
+</section>
+<footer>&copy; 2026 Muhammed Shifa</footer>
+</div>
+</body>
+</html>
